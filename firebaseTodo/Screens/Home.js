@@ -85,7 +85,7 @@ const Home = () => {
 
                 />
                 <TouchableOpacity style={styles.button} onPress={addTodo}>
-                <Text style={style.buttonText}>Add</Text>    
+                <Text style={styles.buttonText}>Add</Text>    
                 </TouchableOpacity>
 
             </View>
@@ -101,14 +101,14 @@ const Home = () => {
                         <FontAwesome name='trash-o'
                         color='red'
                         onPress={() => deleteTodo(item)}
-                        style={styles.todIcon}
+                        style={styles.todoIcon}
 
 
                         />
                         <View style={styles.innerContainer}>
                             <Text style={styles.itemHeading}>
 
-                                {item.heading[0].topperCase() + item.heading.slice(1)}
+                                {item.heading[0].toUpperCase() + item.heading.slice(1)}
                             </Text>
                         </View>
 
@@ -153,6 +153,31 @@ const styles = StyleSheet.create({
         marginRight:10,
         marginTop:100,
     },
-    
+    input:{
+        height:48,
+        borderRadius:5,
+        overflow:'hidden',
+        backgroundColor:'white',
+        paddingLeft:16,
+        flex:1,
+        marginRight:5, 
+    },
+    button:{
+        height:47,
+        borderRadius:5,
+        backgroundColor:'#788eec',
+        width:80,
+        alignItems:'center',
+        justifyContent:'center'
+    },
+    buttonText:{
+        color:'white',
+        fontSize:20,
+    },
+    todoIcon:{
+        marginTop:5,
+        fontSize20,
+        marginLeft:14
+    }
      
 })

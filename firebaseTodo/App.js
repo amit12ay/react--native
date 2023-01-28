@@ -7,7 +7,7 @@ import Detail from "./Screens/Detail";
 const Stack = createStackNavigator();
 
 export default function App(){
-  return{
+  return(
     
     <NavigationContainer>
     <Stack.Navigator screenOptions={{headerShown:false}}>
@@ -23,6 +23,6 @@ export default function App(){
     
     
     </NavigationContainer>
-  }
+  )
 
 }
